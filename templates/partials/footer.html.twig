@@ -1,0 +1,27 @@
+<footer style="background-color: #E2E8EA; height:100%;">
+  <section class="container d-flex flex-wrap" style="justify-content: space-around;  padding-top:1%; padding-bottom: 2%;">
+    <article >
+      <div class="nav-item text-body-secondary"><h4 style="color:#0F1A20; font-weight: bold;">Garage</h4></div>
+      <div class="nav-item text-body-secondary"><h4 style="color:#F42C04; font-weight: bold;">V. Parrot</h4></div>
+    </article>
+    <article>
+      <div class="nav-item mb-2"><h5>Navigation</h5></div>
+      <div class="nav-item mb-2"><a href="{{path('home')}}" class="nav-link p-0 text-body-secondary">Acceuil</a></div>
+      <div class="nav-item mb-2"><a href="{{path('voiture_index')}}" class="nav-link p-0 text-body-secondary">Annonces</a></div>
+      <div class="nav-item mb-2"><a href="{{path('home')}}" class="nav-link p-0 text-body-secondary">Service</a></div>
+      <div class="nav-item mb-2"><a href="{{path('page_contact')}}" class="nav-link p-0 text-body-secondary">Contact</a></div>
+    </article>
+    <article>
+      {% if app.user %}
+      <div class="nav-item mb-2"><h5>Administration</h5></div>
+      <div class="nav-item mb-2"><a href="{{path('admin')}}" class="nav-link p-0 text-body-secondary">Page d'administration</a></div>
+      {% endif %}
+    </article>
+    <article>
+      <div class="nav-item mb-2" ><h5>Suivez-nous</h5></div>
+      <div class="nav-item mb-2"><a href="#"><img src="/assets/images/twitter.jpg" width="50">
+      <img src="/assets/images/facebook.jpg" width="40">
+      <img src="/assets/images/instagram.jpg" width="40"></a></div> 
+    </article>
+  </section>
+</footer>

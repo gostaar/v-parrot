@@ -1,0 +1,21 @@
+<header >
+  <div class="container d-flex flex-wrap">
+    <img class="m-auto" src="/assets/images/logo.jpg" href="{{ path('home') }}" style="min-width:100px; max-width: 200px;">
+        <ul class="nav m-auto ">
+          <li class="nav-item"><a href="{{ path('home') }}" class="nav-link link-body-emphasis px-2" id="acceuil">Accueil</a></li>
+          {# <li class="nav-item"><a href="{{ path('voiture_index') }}" class="nav-link link-body-emphasis px-2" id="annonce">Annonces</a></li> #}
+          <li class="nav-item"><a href="{{ path('home') }}" class="nav-link link-body-emphasis px-2" id="service">Services</a></li>
+          <li class="nav-item"><a href="{{ path('page_contact') }}" class="nav-link link-body-emphasis px-2" id="contact">Contact</a></li>
+          <li class="nav-item"><a href="{{path('horaire', {'id':3})}}" class="nav-link link-body-emphasis px-2" id="hiraire">Horaire</a></li>
+        </ul>
+        <ul class="nav m-auto">
+        {% if app.user %}
+          <li class="nav-item nav-link">Bonjour {{ app.user.userIdentifier }}</li>
+          <li class="nav-item"><a href="{{ path('app_logout') }}" class="nav-link link-body-emphasis px-2">Déconnexion</a></li>
+        {% else %} 
+          <li class="nav-item"><a id="connexion" href="{{ path('app_login') }}" class="nav-link link-body-emphasis px-2 ">Connexion</a></li>
+          <li class="nav-item"><a id="deconnexion" href="{{ path('inscription') }}" class="nav-link link-body-emphasis px-2">Inscription</a></li>
+        {% endif %}
+        </ul>
+  </div>
+</header>
